@@ -1,0 +1,1 @@
+important: you need to set the filename in the line after the hardware adress inside dhcpd.conf, otherwise it will not work!
