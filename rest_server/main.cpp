@@ -35,7 +35,7 @@ void MyResource::handleRequest(const Wt::Http::Request& parsed, Wt::Http::Respon
     try {
         sstr >> root;
         auto macaddress = root["mac"].asString();
-        regex isMac("[0-9A-F]\\{2\\}\\(:[0-9A-F]\\{2\\}\\)\\{5\\}", regex::grep);
+        regex isMac("[0-9A-Fa-f]\\{2\\}\\(:[0-9A-Fa-f]\\{2\\}\\)\\{5\\}", regex::grep);
         if(!regex_match(macaddress, isMac)){
             response.out() << "no valid mac" << endl;
             return;

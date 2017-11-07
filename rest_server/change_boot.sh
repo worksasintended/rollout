@@ -12,5 +12,4 @@ cp -f /etc/dhcpd.conf.new /etc/dhcpd.conf
 
 
 killall dhcpd
-dhcpd -q &
-sleep 10
+dhcpd 
