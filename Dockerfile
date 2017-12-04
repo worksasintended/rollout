@@ -9,7 +9,7 @@ COPY grub /tmp/grub
 RUN cd /home/root/rest_server && cmake . && make
 
 #setup pxe boot and dhcpserver
-RUN echo "/srv       *(rw,fsid=0,no_root_squash,no_subtree_check)" >> /etc/exports && echo "/srv/install  *(rw,no_root_squash,no_subtree_check)" >> etc/exports
+RUN echo "/srv       *(ro,fsid=0,no_root_squash,no_subtree_check)" >> /etc/exports && echo "/srv/install  *(ro,no_root_squash,no_subtree_check)" >> etc/exports
 RUN mkdir /srv/install
 VOLUME ["sys/fs/cgroup"]
 EXPOSE 111/udp 2049/udp 69/udp
