@@ -11,5 +11,5 @@ sed  "/$1/{n;s|.*|$address|}" /etc/dhcpd.conf > /etc/dhcpd.conf.new
 cp -f /etc/dhcpd.conf.new /etc/dhcpd.conf
 
 
-killall dhcpd
+killall -9 dhcpd
 dhcpd 
